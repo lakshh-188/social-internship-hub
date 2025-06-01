@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +7,10 @@ import { TaskCard } from "@/components/TaskCard";
 import { TaskModal } from "@/components/TaskModal";
 import { ReferenceLinks } from "@/components/ReferenceLinks";
 import { Benefits } from "@/components/Benefits";
+import { SubmissionProcess } from "@/components/SubmissionProcess";
+import { Notice } from "@/components/Notice";
+import { FloatingActions } from "@/components/FloatingActions";
+import { Footer } from "@/components/Footer";
 import { Task } from "@/types/Task";
 import { AlertCircle } from "lucide-react";
 
@@ -486,8 +491,20 @@ const Index = () => {
       {/* Benefits Section */}
       <Benefits />
 
+      {/* Submission Process Section */}
+      <SubmissionProcess />
+
+      {/* Notice Section */}
+      <Notice />
+
       {/* Reference Links Section */}
       <ReferenceLinks />
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Floating Actions */}
+      <FloatingActions />
 
       {/* Task Modal */}
       {selectedTask && (

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { TaskCard } from "@/components/TaskCard";
 import { TaskModal } from "@/components/TaskModal";
+import { ReferenceLinks } from "@/components/ReferenceLinks";
+import { Benefits } from "@/components/Benefits";
 import { Task } from "@/types/Task";
+import { AlertCircle } from "lucide-react";
 
 const tasks: Task[] = [
   {
@@ -84,7 +88,7 @@ KEY OUTCOMES EXPECTED:
       "Research and create a list of 15-20 target schools/institutes in your area with their contact details and key personnel information",
       "Study the complete UIRAD website page to understand all foundation offerings, eligibility criteria, application processes, and success stories",
       "Prepare a professional presentation or brochure highlighting key programs: scholarships, mentorship, skill development, career guidance",
-      "Schedule formal appointments with school principals, vice-principals, career counselors, or academic coordinators",
+      "Schedule formal appointments with school principals, vice-principals, career counselors or academic coordinators",
       "During visits, conduct needs assessment: ask about student demographics, common challenges, existing support systems",
       "Present relevant foundation programs that align with each institution's specific needs and student profile",
       "Collect institutional feedback: what additional support would be most valuable, willingness to collaborate, preferred communication channels",
@@ -374,6 +378,9 @@ const Index = () => {
     }
   };
 
+  const compulsoryTasks = tasks.slice(0, 3);
+  const optionalTasks = tasks.slice(3);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
       {/* Hero Section */}
@@ -404,29 +411,57 @@ const Index = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-2">Available Tasks</h2>
               <p className="text-gray-600">Choose Your Social Impact Task</p>
               <p className="text-sm text-gray-500 mt-1">
-                Select one of the following tasks to complete your social internship. Each task has different requirements and impact levels.
+                Complete the compulsory tasks first, then choose from optional tasks to maximize your impact.
               </p>
-            </div>
-            <div className="flex gap-4 mt-4 md:mt-0">
-              <div className="text-center">
-                <p className="text-sm font-medium text-gray-500">Popular</p>
-              </div>
-              <div className="text-center">
-                <p className="text-sm font-medium text-gray-500">Submission Guidelines</p>
-              </div>
             </div>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {tasks.map((task) => (
-            <TaskCard
-              key={task.id}
-              task={task}
-              onClick={() => setSelectedTask(task)}
-              getDifficultyColor={getDifficultyColor}
-            />
-          ))}
+        {/* Important Notice */}
+        <Alert className="mb-8 border-purple-200 bg-purple-50">
+          <AlertCircle className="h-4 w-4 text-purple-600" />
+          <AlertTitle className="text-purple-800">Task Requirements</AlertTitle>
+          <AlertDescription className="text-purple-700">
+            <strong>Compulsory:</strong> You must complete the first 3 tasks (Student Empowerment, Institutional Empowerment, and Social Animal Welfare).
+            <br />
+            <strong>Optional:</strong> Choose additional tasks to enhance your impact and earn extra recognition.
+          </AlertDescription>
+        </Alert>
+
+        {/* Compulsory Tasks */}
+        <div className="mb-12">
+          <div className="flex items-center gap-2 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900">Compulsory Tasks</h3>
+            <Badge className="bg-red-100 text-red-800">Required</Badge>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {compulsoryTasks.map((task) => (
+              <TaskCard
+                key={task.id}
+                task={task}
+                onClick={() => setSelectedTask(task)}
+                getDifficultyColor={getDifficultyColor}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Optional Tasks */}
+        <div className="mb-12">
+          <div className="flex items-center gap-2 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900">Optional Tasks</h3>
+            <Badge className="bg-blue-100 text-blue-800">Choose Any</Badge>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {optionalTasks.map((task) => (
+              <TaskCard
+                key={task.id}
+                task={task}
+                onClick={() => setSelectedTask(task)}
+                getDifficultyColor={getDifficultyColor}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Call to Action */}
@@ -447,6 +482,12 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* Benefits Section */}
+      <Benefits />
+
+      {/* Reference Links Section */}
+      <ReferenceLinks />
 
       {/* Task Modal */}
       {selectedTask && (

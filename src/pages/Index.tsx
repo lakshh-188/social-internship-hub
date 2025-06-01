@@ -480,8 +480,16 @@ const Index = () => {
             Join our Social Internship Program today and be part of meaningful change while earning benefits.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
-              Register for Social Internship
+            
+            <Button size="lg" className="bg-purple-6 hover:bg-purple-700">
+              
+
+              <a href="https://forms.gle/vuRAsPvLFSSQgDUFA" target="_blank" rel="noopener noreferrer">
+ <Button size="lg" variant="secondary" className="text-purple-700 hover:text-purple-800">
+ Apply For social Internship
+ </Button>
+ </a>
+
             </Button>
             <Button size="lg" variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
               Internship Submission form

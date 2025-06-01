@@ -8,10 +8,10 @@ const referenceLinks = [
     category: "Official Documentation",
     icon: <FileText className="w-5 h-5" />,
     links: [
-      { title: "Uniford Foundation Programs", url: "#", description: "Complete guide to all foundation programs" },
-      { title: "ID Card Benefits", url: "#", description: "Digital ID card features and benefits" },
-      { title: "Pitchburg Platform", url: "#", description: "Innovation and startup platform details" },
-      { title: "UIRAD Website", url: "#", description: "Institutional partnership information" }
+      { title: "Uniford Foundation Programs", url: "https://www.uniford.org/programs", description: "Complete guide to all foundation programs" },
+      { title: "ID Card Benefits", url: "https://www.uniford.org/id-card", description: "Digital ID card features and benefits" },
+      { title: "Pitchburg Platform", url: "https://www.uniford.org/uni-pitch", description: "Innovation and startup platform details" },
+      { title: "UIRAD Website", url: "https://www.uniford.org/uirad", description: "Institutional partnership information" }
     ]
   },
   {
@@ -67,9 +67,11 @@ export const ReferenceLinks = () => {
                           <h4 className="font-medium text-gray-900 mb-1">{link.title}</h4>
                           <p className="text-sm text-gray-600">{link.description}</p>
                         </div>
-                        <Button variant="ghost" size="sm" className="ml-2">
-                          <ExternalLink className="w-4 h-4" />
-                        </Button>
+                        <a href={link.url} target="_blank" rel="noopener noreferrer">
+                          <Button variant="ghost" size="sm" className="ml-2">
+                            <ExternalLink className="w-4 h-4" />
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   ))}

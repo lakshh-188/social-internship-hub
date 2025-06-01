@@ -18,7 +18,7 @@ export const Footer = () => {
                 variant="outline"
                 size="sm"
                 className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
-                onClick={() => window.open('https://instagram.com/your-page', '_blank')}
+                onClick={() => window.open('https://www.instagram.com/uniford_scholar?igsh=MWU0aWRwYmhwZGJsMg==', '_blank')}
               >
                 <Instagram className="w-4 h-4 mr-2" />
                 Instagram
@@ -27,7 +27,7 @@ export const Footer = () => {
                 variant="outline"
                 size="sm"
                 className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
-                onClick={() => window.open('https://linkedin.com/company/your-page', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/company/unifordfoundation/?viewAsMember=true', '_blank')}
               >
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn

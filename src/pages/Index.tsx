@@ -398,9 +398,11 @@ const Index = () => {
             Complete meaningful tasks, make a difference in society, and get your registration fee refunded
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-purple-700 hover:text-purple-800">
-              Register Now
-            </Button>
+ <a href="https://forms.gle/vuRAsPvLFSSQgDUFA" target="_blank" rel="noopener noreferrer">
+ <Button size="lg" variant="secondary" className="text-purple-700 hover:text-purple-800">
+ Register Now
+ </Button>
+ </a>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-700">
               Learn More
             </Button>
@@ -482,7 +484,7 @@ const Index = () => {
               Register for Social Internship
             </Button>
             <Button size="lg" variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
-              View Official Documents
+              Internship Submission form
             </Button>
           </div>
         </div>

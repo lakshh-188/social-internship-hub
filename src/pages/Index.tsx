@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +12,7 @@ import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
 import { Task } from "@/types/Task";
 import { AlertCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const tasks: Task[] = [
   {
@@ -100,274 +100,6 @@ KEY OUTCOMES EXPECTED:
       "Maintain detailed visit records: institution name, contact person, discussion summary, follow-up actions, potential collaboration opportunities",
       "Submit comprehensive report with recommendations for partnership strategies and potential program implementations"
     ]
-  },
-  {
-    id: 3,
-    title: "Social Animal Welfare",
-    subtitle: "Help Animals & Birds",
-    description: "Install water buckets for birds or any things for animals, birds etc",
-    duration: "7 days",
-    difficulty: "Easy",
-    impact: "Medium",
-    icon: "🐦",
-    category: "Welfare",
-    detailedDescription: `DETAILED TASK OVERVIEW:
-This compassionate initiative focuses on creating sustainable support systems for local wildlife and street animals.
-
-PLANNING PHASE (Days 1-2):
-- Survey your neighborhood to identify high-traffic animal areas
-- Assess what type of support is most needed
-- Gather necessary materials and permissions
-
-IMPLEMENTATION PHASE (Days 3-6):
-- Install water sources and feeding stations
-- Create shelter options
-- Monitor and maintain installations
-
-EXAMPLE PROJECTS:
-1. BIRD WATER STATIONS: Install small bowls or containers on rooftops, balconies, or trees. Use shallow containers (2-3 inches deep) that birds can easily access. Change water every 2-3 days to prevent mosquito breeding.
-
-2. STREET DOG FEEDING: Set up regular feeding spots with proper food containers. Coordinate with local residents to ensure sustainability.
-
-3. SHELTER CREATION: Build simple shelters using cardboard boxes, old blankets, or plastic containers for street animals during harsh weather.
-
-SAFETY CONSIDERATIONS:
-- Always maintain safe distance from unknown animals
-- Use proper hygiene practices
-- Get tetanus vaccination if handling materials that might cause cuts
-
-SUSTAINABILITY TIPS:
-- Involve neighbors and local communities
-- Create maintenance schedules
-- Use weather-resistant materials`,
-    requirements: [
-      "Survey your neighborhood to identify areas with high bird/animal activity and assess their specific needs (water, food, shelter)",
-      "Install at least 5-8 water stations for birds in accessible locations like terraces, balconies, trees, or community areas",
-      "Create feeding stations for street animals using proper containers that protect food from rain and contamination",
-      "Build or install simple shelter structures for animals using recycled materials like wooden boxes, plastic containers, or cloth",
-      "Document your installations with photos showing before/after scenarios and animals using the facilities",
-      "Create a maintenance schedule and involve family members or neighbors in upkeep responsibilities",
-      "Monitor the installations for 1 week to ensure they're being used and make necessary adjustments",
-      "Share your experience and encourage others in your community to replicate similar initiatives"
-    ]
-  },
-  {
-    id: 4,
-    title: "Innovation By Waste",
-    subtitle: "Create Innovative Solutions",
-    description: "Create innovative things using house waste like dustbin, plant pots etc",
-    duration: "10 days",
-    difficulty: "Medium",
-    impact: "High",
-    icon: "♻️",
-    category: "Innovation",
-    detailedDescription: `DETAILED TASK OVERVIEW:
-Transform household waste into functional, innovative items that demonstrate creativity and environmental consciousness.
-
-CREATIVE PROCESS (Days 1-3):
-- Audit household waste materials
-- Brainstorm innovative solutions
-- Design and plan your projects
-
-CONSTRUCTION PHASE (Days 4-8):
-- Build your innovative items
-- Test functionality and durability
-- Make improvements and refinements
-
-EXAMPLE PROJECTS:
-
-1. PLASTIC BOTTLE PLANTERS:
-- Use 2L bottles cut horizontally
-- Create drainage holes
-- Add rope for hanging systems
-- Perfect for herbs and small plants
-
-2. CARDBOARD ORGANIZERS:
-- Transform shoe boxes into desk organizers
-- Create compartments for stationery
-- Cover with decorative paper or paint
-
-3. TIN CAN INNOVATIONS:
-- Convert large tins into storage containers
-- Create pen holders with multiple compartments
-- Build bird feeders with feeding holes
-
-4. NEWSPAPER/MAGAZINE CRAFTS:
-- Roll papers into sturdy baskets
-- Create decorative wall art
-- Make seed starter pots
-
-INNOVATION CRITERIA:
-- Must be functional and useful
-- Should solve a real problem
-- Use primarily waste materials
-- Demonstrate creativity and practical thinking
-
-DOCUMENTATION REQUIREMENTS:
-- Before/after photos of materials
-- Step-by-step creation process
-- Final product in use
-- Cost savings analysis`,
-    requirements: [
-      "Collect and categorize household waste materials: plastic containers, cardboard boxes, glass jars, tin cans, newspapers, fabric scraps",
-      "Design at least 3-5 different innovative items that serve practical purposes in daily life (storage, organization, gardening, decoration)",
-      "Create detailed project plans including materials needed, tools required, and step-by-step construction process",
-      "Build your innovations ensuring they are functional, durable, and aesthetically pleasing",
-      "Test each item for practical use and make improvements based on functionality",
-      "Document the entire process with photos: raw materials, work-in-progress, and final products being used",
-      "Calculate environmental impact: amount of waste diverted from landfills, money saved on purchasing new items",
-      "Create an instruction guide or video tutorial that others can follow to replicate your innovations",
-      "Share your creations on social media or community groups to inspire others and promote waste reduction"
-    ]
-  },
-  {
-    id: 5,
-    title: "Community Food & Clothing Drive",
-    subtitle: "Help Underprivileged Communities",
-    description: "Donate raw food, clothes to nearby roadside tribal, poor peoples",
-    duration: "5 days",
-    difficulty: "Easy",
-    impact: "Very High",
-    icon: "❤️",
-    category: "Community",
-    detailedDescription: `DETAILED TASK OVERVIEW:
-Organize a meaningful community outreach program to support underprivileged families and individuals with basic necessities.
-
-ORGANIZATION PHASE (Days 1-2):
-- Identify beneficiary communities
-- Plan collection and distribution strategy
-- Coordinate with family, friends, and neighbors
-
-COLLECTION PHASE (Days 3-4):
-- Gather food and clothing donations
-- Sort and package items appropriately
-- Ensure quality and hygiene standards
-
-DISTRIBUTION PHASE (Day 5):
-- Distribute items with dignity and respect
-- Document impact and beneficiary feedback
-
-EXAMPLE DISTRIBUTION STRATEGY:
-
-FOOD ITEMS TO COLLECT:
-- Rice, wheat flour, lentils (dal)
-- Cooking oil, sugar, tea
-- Biscuits, dry fruits, canned goods
-- Baby food (if families have infants)
-
-CLOTHING PRIORITY:
-- Clean, wearable clothes in good condition
-- Seasonal appropriate items
-- Children's clothes (always in high demand)
-- Blankets and warm clothing
-
-IDENTIFICATION OF BENEFICIARIES:
-- Roadside vendors and their families
-- Construction workers in temporary settlements
-- Elderly individuals living alone
-- Families in slum areas or temporary shelters
-
-DISTRIBUTION BEST PRACTICES:
-- Approach with respect and dignity
-- Ask about specific needs before distributing
-- Involve beneficiaries in the process
-- Maintain privacy and avoid taking photos without permission
-
-SAFETY GUIDELINES:
-- Visit in groups, not alone
-- Inform family about your locations
-- Carry hand sanitizer and wear masks
-- Distribute during daylight hours`,
-    requirements: [
-      "Identify 3-5 underprivileged families or communities in your area through observation, local contacts, or community organizations",
-      "Organize collection drive among family, friends, neighbors, and classmates for raw food items (rice, flour, oil, lentils, sugar)",
-      "Collect clean, wearable clothing items suitable for different age groups and seasons",
-      "Sort and package donations hygienically in clean bags or containers with labels indicating contents",
-      "Plan distribution strategy ensuring dignity and respect: visit during appropriate times, approach respectfully, ask about specific needs",
-      "Distribute items personally, engaging with beneficiaries to understand their situations and additional needs",
-      "Document the initiative through photos (with permission) and record number of families helped and items distributed",
-      "Collect feedback from beneficiaries about most needed items for future reference",
-      "Create a sustainability plan by connecting beneficiaries with local NGOs or government schemes for ongoing support"
-    ]
-  },
-  {
-    id: 6,
-    title: "Collab With Frontliners",
-    subtitle: "Invite for Stanburg Award",
-    description: "Find 5-10 students with projects, startups, innovations, social initiatives",
-    duration: "15 days",
-    difficulty: "Hard",
-    impact: "Very High",
-    icon: "🏆",
-    category: "Collaboration",
-    detailedDescription: `DETAILED TASK OVERVIEW:
-Identify and recruit exceptional students with innovative projects for the prestigious Stanburg Award, creating a network of young changemakers.
-
-RESEARCH PHASE (Days 1-5):
-- Study Pitchburg platform and Stanburg Award criteria
-- Identify potential candidates through various channels
-- Create outreach strategy
-
-OUTREACH PHASE (Days 6-12):
-- Contact potential candidates
-- Evaluate their projects/initiatives
-- Guide them through application process
-
-EXAMPLE CANDIDATE PROFILES:
-
-1. TECH INNOVATORS:
-- Students developing mobile apps for social causes
-- Those working on IoT solutions for rural problems
-- AI/ML projects addressing real-world challenges
-
-2. SOCIAL ENTREPRENEURS:
-- Students running NGOs or social initiatives
-- Those creating sustainable business models
-- Community development project leaders
-
-3. RESEARCH PIONEERS:
-- Students with published research papers
-- Those working on breakthrough technologies
-- Innovation in traditional fields with modern applications
-
-4. CREATIVE PROBLEM SOLVERS:
-- Artists using creativity for social change
-- Students developing educational tools
-- Environmental conservation innovators
-
-NETWORKING STRATEGIES:
-- LinkedIn: Search for students posting about projects
-- College tech fests and innovation competitions
-- Startup incubators and accelerators
-- Social media groups focused on innovation
-- University research departments
-- Engineering and management college networks
-
-EVALUATION CRITERIA:
-- Innovation and originality of the project
-- Social impact potential
-- Scalability and sustainability
-- Student's passion and commitment
-- Alignment with Stanburg Award objectives
-
-ENGAGEMENT PROCESS:
-- Initial contact through personalized messages
-- Detailed discussion about their projects
-- Explanation of Stanburg Award benefits
-- Guidance on application preparation
-- Follow-up and support throughout the process`,
-    requirements: [
-      "Study the Pitchburg platform thoroughly to understand Stanburg Award criteria, benefits, application process, and success stories",
-      "Create a systematic search strategy using LinkedIn, college networks, startup communities, and innovation forums to identify potential candidates",
-      "Develop a database of 20-30 potential candidates with details: name, institution, project description, contact information, innovation level",
-      "Reach out through personalized messages explaining the award opportunity and requesting detailed project information",
-      "Screen candidates based on innovation quality, social impact, scalability, and alignment with award criteria",
-      "Conduct detailed conversations (calls/meetings) with shortlisted candidates to assess their passion, commitment, and project potential",
-      "Guide selected candidates through the application process, helping them understand requirements and prepare strong submissions",
-      "Maintain regular follow-up communication to ensure application completion and provide ongoing support",
-      "Create a comprehensive report with candidate profiles, project summaries, recommendation rankings, and potential impact assessment",
-      "Submit final list of 5-10 qualified candidates with complete documentation and personal recommendations to the foundation"
-    ]
   }
 ];
 
@@ -383,8 +115,7 @@ const Index = () => {
     }
   };
 
-  const compulsoryTasks = tasks.slice(0, 3);
-  const optionalTasks = tasks.slice(3);
+  const compulsoryTasks = tasks;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
@@ -398,11 +129,11 @@ const Index = () => {
             Complete meaningful tasks, make a difference in society, and get your registration fee refunded
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
- <a href="https://forms.gle/vuRAsPvLFSSQgDUFA" target="_blank" rel="noopener noreferrer">
- <Button size="lg" variant="secondary" className="text-purple-700 hover:text-purple-800">
- Register Now
- </Button>
- </a>
+            <a href="https://forms.gle/vuRAsPvLFSSQgDUFA" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="secondary" className="text-purple-700 hover:text-purple-800">
+                Register Now
+              </Button>
+            </a>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-700">
               Learn More
             </Button>
@@ -429,9 +160,9 @@ const Index = () => {
           <AlertCircle className="h-4 w-4 text-purple-600" />
           <AlertTitle className="text-purple-800">Task Requirements</AlertTitle>
           <AlertDescription className="text-purple-700">
-            <strong>Compulsory:</strong> You must complete the first 3 tasks (Student Empowerment, Institutional Empowerment, and Social Animal Welfare).
+            <strong>Compulsory:</strong> You must complete the first 2 tasks (Student Empowerment and Institutional Empowerment).
             <br />
-            <strong>Optional:</strong> Choose additional tasks to enhance your impact and earn extra recognition.
+            <strong>Optional:</strong> Visit the optional tasks page to choose additional tasks and enhance your impact.
           </AlertDescription>
         </Alert>
 
@@ -441,7 +172,7 @@ const Index = () => {
             <h3 className="text-2xl font-bold text-gray-900">Compulsory Tasks</h3>
             <Badge className="bg-red-100 text-red-800">Required</Badge>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             {compulsoryTasks.map((task) => (
               <TaskCard
                 key={task.id}
@@ -453,21 +184,32 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Optional Tasks */}
+        {/* Optional Tasks Preview */}
         <div className="mb-12">
-          <div className="flex items-center gap-2 mb-6">
-            <h3 className="text-2xl font-bold text-gray-900">Optional Tasks</h3>
-            <Badge className="bg-blue-100 text-blue-800">Choose Any</Badge>
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-2">
+              <h3 className="text-2xl font-bold text-gray-900">Optional Tasks</h3>
+              <Badge className="bg-blue-100 text-blue-800">Choose Any</Badge>
+            </div>
+            <Link to="/optional-tasks">
+              <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
+                View All Optional Tasks
+              </Button>
+            </Link>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {optionalTasks.map((task) => (
-              <TaskCard
-                key={task.id}
-                task={task}
-                onClick={() => setSelectedTask(task)}
-                getDifficultyColor={getDifficultyColor}
-              />
-            ))}
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 text-center">
+            <h4 className="text-xl font-bold text-gray-900 mb-4">
+              4 Additional Optional Tasks Available
+            </h4>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Enhance your social impact by completing additional tasks including Social Animal Welfare, 
+              Innovation by Waste, Community Food & Clothing Drive, and Collaboration with Frontliners.
+            </p>
+            <Link to="/optional-tasks">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                Explore Optional Tasks
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -480,19 +222,13 @@ const Index = () => {
             Join our Social Internship Program today and be part of meaningful change while earning benefits.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            
-            <Button size="lg" className="bg-purple-6 hover:bg-purple-700">
-              
-
-              <a href="https://forms.gle/vuRAsPvLFSSQgDUFA" target="_blank" rel="noopener noreferrer">
- <Button size="lg" variant="secondary" className="text-purple-700 hover:text-purple-800">
- Apply For social Internship
- </Button>
- </a>
-
-            </Button>
+            <a href="https://forms.gle/vuRAsPvLFSSQgDUFA" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                Apply For Social Internship
+              </Button>
+            </a>
             <Button size="lg" variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
-              Internship Submission form
+              Internship Submission Form
             </Button>
           </div>
         </div>

@@ -1,71 +1,211 @@
 
-import { Button } from "@/components/ui/button";
-import { Instagram, Linkedin, Heart } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Brand Section */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Social Internship Program</h3>
-            <p className="text-gray-300 mb-4">
-              Empowering students to make a meaningful difference in society while building valuable skills and earning recognition.
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div className="col-span-1">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="h-8 w-8 rounded-md bg-purple-600"></div>
+              <span className="text-xl font-bold">Uniford Foundation</span>
+            </div>
+            <p className="text-gray-300 mb-6">
+              Empowering scholars through resources, platforms, and opportunities.
             </p>
-            <div className="flex space-x-4">
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
-                onClick={() => window.open('https://www.instagram.com/uniford_scholar?igsh=MWU0aWRwYmhwZGJsMg==', '_blank')}
-              >
-                <Instagram className="w-4 h-4 mr-2" />
-                Instagram
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
-                onClick={() => window.open('https://www.linkedin.com/company/unifordfoundation/?viewAsMember=true', '_blank')}
-              >
-                <Linkedin className="w-4 h-4 mr-2" />
-                LinkedIn
-              </Button>
+            <div className="flex gap-4">
+              <a href="https://www.linkedin.com/company/unifordfoundation" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-purple-600 transition-colors">
+                <span className="sr-only">LinkedIn</span>
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
             </div>
           </div>
-
-          {/* Quick Links */}
+          
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#tasks" className="hover:text-white transition-colors">Available Tasks</a></li>
-              <li><a href="#benefits" className="hover:text-white transition-colors">Benefits</a></li>
-              <li><a href="#resources" className="hover:text-white transition-colors">Resources</a></li>
-              <li><a href="#submission" className="hover:text-white transition-colors">Submission Process</a></li>
+            <h3 className="text-lg font-semibold mb-4">Programs</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/programs" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  All Programs
+                </Link>
+              </li>
+              <li>
+                <Link to="/uni-pitch" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Uni-Pitch
+                </Link>
+              </li>
+              <li>
+                <Link to="/uirad" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  UIRAD
+                </Link>
+              </li>
+              <li>
+                <Link to="/backed-by-uniford" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Backed By Uniford
+                </Link>
+              </li>
+              <li>
+                <Link to="/social-internship" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Social Internship
+                </Link>
+              </li>
+              <li>
+                <Link to="/h1b-scholar" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  H-1B Scholar
+                </Link>
+              </li>
+              <li>
+                <Link to="/career" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Career
+                </Link>
+              </li>
+              <li>
+                <Link to="/s700" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  S-700 Projects
+                </Link>
+              </li>
+              <li>
+                <Link to="/caf" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  CAF - Common Application
+                </Link>
+              </li>
+            </ul>
+            <h3 className="text-lg font-semibold mb-4 mt-6">Partnerships</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/we-backed" className="text-gray-300 hover:text-white hover:underline transition-colors">We Backed</Link>
+              </li>
+              <li>
+                <Link to="/we-invite" className="text-gray-300 hover:text-white hover:underline transition-colors">We Invite</Link>
+              </li>
             </ul>
           </div>
-
-          {/* Contact Info */}
+          
           <div>
-            <h4 className="text-lg font-semibold mb-4">Get Support</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>📱 24/7 WhatsApp Help Desk</li>
-              <li>👥 Community Support Group</li>
-              <li>📧 Email: support@socialinternship.org</li>
-              <li>🌐 Visit: uniford.org</li>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/h1b-scholar" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  H1B
+                </Link>
+              </li>
+              <li>
+                <Link to="/career" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Career
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq-updates" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  FAQ Updates
+                </Link>
+              </li>
+              <li>
+                <Link to="/leaders" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Leaders
+                </Link>
+              </li>
+              <li>
+                <Link to="/memories" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Memories
+                </Link>
+              </li>
+              <li>
+                <Link to="/letter-of-acceptance" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Letter of Acceptance
+                </Link>
+              </li>
+              <li>
+                <Link to="/letter-of-clearance" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Letter of Clearance
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/what-matters" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  What Matters
+                </Link>
+              </li>
+              <li>
+                <Link to="/official-documents" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Official Documents
+                </Link>
+              </li>
+              <li>
+                <Link to="/published" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Published Resources
+                </Link>
+              </li>
+              <li>
+                <Link to="/premium-store" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Premium Store
+                </Link>
+              </li>
+              <li>
+                <Link to="/legal-policy" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Legal Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq-updates" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  FAQ & Updates
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact & Apply</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/apply" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Apply for Programs
+                </Link>
+              </li>
+              <li>
+                <Link to="/id-card" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  ID Card Application
+                </Link>
+              </li>
+              <li>
+                <Link to="/talent-hunt-alliance" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Talent Hunt Alliance
+                </Link>
+              </li>
+              <li>
+                <Link to="/letter-of-clearance" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Letter of Clearance
+                </Link>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-purple-600 shrink-0" />
+                <a href="tel:+917347099610" className="text-gray-300 hover:text-white transition-colors">
+                  +917347099610
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-purple-600 shrink-0" />
+                <a href="mailto:info@uniford.org" className="text-gray-300 hover:text-white transition-colors">
+                  info@uniford.org
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400 flex items-center justify-center">
-            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> for social impact
-            <span className="mx-2">•</span>
-            © 2024 Social Internship Program. All rights reserved.
-          </p>
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} Uniford Foundation. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 };
+
+export default Footer;

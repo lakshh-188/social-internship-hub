@@ -10,6 +10,7 @@ import { SubmissionProcess } from "@/components/SubmissionProcess";
 import { Notice } from "@/components/Notice";
 import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 import { Task } from "@/types/Task";
 import { AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -119,8 +120,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
+      {/* NavBar */}
+      <NavBar />
+      
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-16">
+      <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-16 pt-32">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Social Internship Program

@@ -1,9 +1,10 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TaskCard } from "@/components/TaskCard";
 import { TaskModal } from "@/components/TaskModal";
+import { Footer } from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 import { Task } from "@/types/Task";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -293,8 +294,12 @@ const OptionalTasks = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-16">
+      {/* NavBar */}
+      <NavBar />
+      
+      {/* Header Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 pt-32">
+        {/* Header */}
         <div className="container mx-auto px-4">
           <Link to="/" className="inline-flex items-center gap-2 text-white hover:text-purple-200 mb-6">
             <ArrowLeft className="w-5 h-5" />
@@ -314,8 +319,9 @@ const OptionalTasks = () => {
         </div>
       </div>
 
-      {/* Tasks Section */}
+      {/* Optional Tasks Section */}
       <div className="container mx-auto px-4 py-12">
+        {/* Tasks Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Available Optional Tasks</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -355,6 +361,9 @@ const OptionalTasks = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
 
       {/* Task Modal */}
       {selectedTask && (

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -9,7 +10,7 @@ import { Benefits } from "@/components/Benefits";
 import { SubmissionProcess } from "@/components/SubmissionProcess";
 import { Notice } from "@/components/Notice";
 import { FloatingActions } from "@/components/FloatingActions";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import { Task } from "@/types/Task";
 import { AlertCircle } from "lucide-react";

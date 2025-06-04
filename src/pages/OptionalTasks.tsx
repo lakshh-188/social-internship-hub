@@ -1,9 +1,10 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TaskCard } from "@/components/TaskCard";
 import { TaskModal } from "@/components/TaskModal";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import { Task } from "@/types/Task";
 import { ArrowLeft } from "lucide-react";

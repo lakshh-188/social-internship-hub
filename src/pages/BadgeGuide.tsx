@@ -3,7 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { CheckCircle, Download, Mail, ExternalLink, FileText, Users, Award, Star, Globe, BookOpen, Video, FileCode, Code, Sparkles, Heart, Rocket, Gift } from "lucide-react";
+import { CheckCircle, Download, Mail, ExternalLink, FileText, Users, Award, Star, Globe, BookOpen, Video, FileCode, Code, Sparkles, Heart, Rocket, Gift, Eye } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import Footer from "@/components/Footer";
 
 const BadgeGuide = () => {
@@ -21,7 +22,8 @@ const BadgeGuide = () => {
       step: 2,
       title: "Download & Submit Documents",
       description: "Download your generated documents and email them to our department",
-      action: "Email to: info@uniford.org"
+      action: "Email to: info@uniford.org",
+      showEmailTemplate: true
     },
     {
       step: 3,
@@ -101,6 +103,54 @@ const BadgeGuide = () => {
     }
   ];
 
+  const EmailTemplateDialog = () => (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline" className="gap-2 mt-3">
+          <Eye className="w-4 h-4" />
+          View Sample Email Format
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="max-w-2xl">
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-2">
+            <Mail className="w-5 h-5 text-blue-600" />
+            Sample Email Format
+          </DialogTitle>
+          <DialogDescription>
+            Use this format as inspiration when emailing your documents to info@uniford.org
+          </DialogDescription>
+        </DialogHeader>
+        <div className="bg-gray-50 p-6 rounded-lg border">
+          <div className="space-y-4">
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-2">Subject:</h4>
+              <p className="bg-white p-3 rounded border text-gray-700">
+                Request for Offer Letter & Badge Verification
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-2">Email Body:</h4>
+              <div className="bg-white p-4 rounded border text-gray-700 space-y-3">
+                <p>Dear Team,</p>
+                <p>I have successfully downloaded my Offer Letter and Badge for the Uniford Program.</p>
+                <p>I am applying for the Badge and kindly request you to please apply the stamp & verify my Offer Letter.</p>
+                <p>Once verified, I will proceed with the assigned tasks.</p>
+                <p>Thank you for your support.</p>
+                <div className="mt-4 space-y-1">
+                  <p><strong>Name:</strong> [Your Full Name]</p>
+                  <p><strong>Registered Email:</strong> [Your Email]</p>
+                  <p><strong>Phone Number:</strong> [Your Phone Number]</p>
+                </div>
+                <p className="mt-4">Best regards,<br />[Your Name]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-50">
       {/* Hero Section */}
@@ -158,10 +208,13 @@ const BadgeGuide = () => {
                     </div>
                   )}
                   {step.action && (
-                    <Alert className="bg-blue-50 border-blue-200">
-                      <Mail className="w-4 h-4" />
-                      <AlertDescription className="font-medium">{step.action}</AlertDescription>
-                    </Alert>
+                    <div>
+                      <Alert className="bg-blue-50 border-blue-200">
+                        <Mail className="w-4 h-4" />
+                        <AlertDescription className="font-medium">{step.action}</AlertDescription>
+                      </Alert>
+                      {step.showEmailTemplate && <EmailTemplateDialog />}
+                    </div>
                   )}
                   {step.note && (
                     <p className="text-sm text-gray-600 mt-2">{step.note}</p>

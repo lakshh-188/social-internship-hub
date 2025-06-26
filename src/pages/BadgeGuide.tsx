@@ -1,10 +1,9 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { CheckCircle, Download, Mail, ExternalLink, FileText, Users, Award, Star, Globe, BookOpen, Video, FileCode, Code } from "lucide-react";
+import { CheckCircle, Download, Mail, ExternalLink, FileText, Users, Award, Star, Globe, BookOpen, Video, FileCode, Code, Sparkles, Heart, Rocket, Gift } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const BadgeGuide = () => {
@@ -182,66 +181,241 @@ const BadgeGuide = () => {
           </div>
         </section>
 
-        {/* Task Details Section */}
+        {/* Task Guide Section */}
         <section>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
-              <FileText className="w-8 h-8 text-blue-600" />
-              Badge Task Requirements
+              <Sparkles className="w-8 h-8 text-purple-600" />
+              Task Guide
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Create and submit your professional portfolio website using our hi-tech international standard code and comprehensive guidance
+              Your step-by-step guide to creating and submitting your professional portfolio website
             </p>
           </div>
 
-          <Card className="mb-8 border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl text-blue-800 flex items-center justify-center gap-3">
-                <Globe className="w-8 h-8" />
-                Portfolio Website Submission
-              </CardTitle>
-              <CardDescription className="text-lg text-blue-700">
-                The Primary Requirement for Badge Certification
+          <Card className="mb-8 border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-pink-50 overflow-hidden">
+            <CardHeader className="text-center pb-6">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="text-4xl">🎨</div>
+                <CardTitle className="text-2xl text-purple-800">
+                  Uniford Portfolio Website — Easy Task Guide
+                </CardTitle>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-lg text-purple-700 mb-4">
+                <div className="text-2xl">👋</div>
+                <span className="font-semibold">Hello Champion! Ready to show the world your talent?</span>
+              </div>
+              <CardDescription className="text-base text-purple-600 max-w-2xl mx-auto">
+                We have already given you a cool, international-level Portfolio Website. You just have to:
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="bg-white p-6 rounded-lg border border-blue-200">
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">What You Need to Submit</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-lg">Professional Portfolio Website</h4>
-                      <p className="text-gray-600">A complete, personalized portfolio website showcasing your skills, projects, and professional profile</p>
+            
+            <CardContent className="space-y-8">
+              {/* Quick Overview */}
+              <div className="bg-white p-6 rounded-xl border border-purple-200">
+                <div className="grid md:grid-cols-3 gap-4 text-center">
+                  <div className="space-y-2">
+                    <div className="text-2xl">✔️</div>
+                    <p className="font-semibold text-gray-800">Add your name & details</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-2xl">✔️</div>
+                    <p className="font-semibold text-gray-800">Edit your info (even if you are still preparing — that's totally okay!)</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-2xl">✔️</div>
+                    <p className="font-semibold text-gray-800">Submit your website link</p>
+                  </div>
+                </div>
+                <div className="text-center mt-6">
+                  <div className="flex items-center justify-center gap-2 text-xl font-bold text-purple-600">
+                    <span>Let's go!</span>
+                    <Rocket className="w-6 h-6" />
+                  </div>
+                </div>
+              </div>
+
+              {/* What You Have to Do */}
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                <h3 className="text-xl font-bold mb-4 text-green-800 flex items-center gap-3">
+                  <div className="text-2xl">🟢</div>
+                  What You Have to Do:
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
+                      <span className="text-gray-700">Open the website files we gave you</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
+                      <span className="text-gray-700">Find the places where your name, picture, and info are written</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
+                      <span className="text-gray-700">Edit your personal details like:</span>
+                    </div>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-green-100">
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <div className="text-lg">✔️</div>
+                        <span className="font-semibold">Your Name</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <div className="text-lg">✔️</div>
+                        <div>
+                          <span className="font-semibold">About You</span>
+                          <p className="text-gray-600 text-xs">Example: "I am a student passionate about AI & learning new things."</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <div className="text-lg">✔️</div>
+                        <div>
+                          <span className="font-semibold">Skills</span>
+                          <p className="text-gray-600 text-xs">Example: "Web Development, Problem Solving"</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              {/* Guidance for incomplete sections */}
+              <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
+                <h4 className="text-lg font-bold mb-4 text-blue-800 flex items-center gap-2">
+                  <div className="text-xl">📝</div>
+                  Don't Have Something Yet? No Problem!
+                </h4>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-white p-4 rounded-lg border border-blue-100">
+                    <h5 className="font-semibold text-blue-700 mb-2">Projects/Internships</h5>
+                    <p className="text-sm text-gray-700 italic">"Currently preparing, building my skills." or "We are in the planning phase."</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-blue-100">
+                    <h5 className="font-semibold text-blue-700 mb-2">Certificates</h5>
+                    <p className="text-sm text-gray-700 italic">"Learning in progress, excited to earn certificates soon."</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-blue-100 md:col-span-2">
+                    <h5 className="font-semibold text-blue-700 mb-2">Startup/Initiative</h5>
+                    <p className="text-sm text-gray-700 italic">"Exploring ideas, in early planning stage."</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* How to Edit */}
+              <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-6 rounded-xl border border-orange-200">
+                <h3 className="text-xl font-bold mb-4 text-orange-800 flex items-center gap-3">
+                  <div className="text-2xl">🛠️</div>
+                  How to Edit It (Easy Steps):
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3 bg-white p-3 rounded-lg border border-orange-100">
+                      <div className="text-xl">💻</div>
+                      <span className="text-gray-700">Open the files on your laptop or phone</span>
+                    </div>
+                    <div className="flex items-start gap-3 bg-white p-3 rounded-lg border border-orange-100">
+                      <div className="text-xl">✏️</div>
+                      <span className="text-gray-700">Find the sections like About Me, Projects, Certificates</span>
+                    </div>
+                    <div className="flex items-start gap-3 bg-white p-3 rounded-lg border border-orange-100">
+                      <div className="text-xl">📝</div>
+                      <span className="text-gray-700">Type your real info or "Working/Preparing" wherever you don't have something yet</span>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3 bg-white p-3 rounded-lg border border-orange-100">
+                      <div className="text-xl">🌐</div>
+                      <span className="text-gray-700">Save the changes</span>
+                    </div>
+                    <div className="flex items-start gap-3 bg-white p-3 rounded-lg border border-orange-100">
+                      <div className="text-xl">📤</div>
+                      <span className="text-gray-700">Upload your website to Vercel, Netlify, or GitHub Pages</span>
+                    </div>
+                    <div className="flex items-start gap-3 bg-white p-3 rounded-lg border border-orange-100">
+                      <div className="text-xl">🔗</div>
+                      <span className="text-gray-700">Copy your website link and Submit it to us</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Important Message */}
+              <Alert className="bg-gradient-to-r from-pink-50 to-rose-50 border-pink-200 border-2">
+                <Star className="w-5 h-5 text-pink-600" />
+                <AlertDescription className="text-base">
+                  <div className="space-y-2">
+                    <h4 className="font-bold text-pink-800 flex items-center gap-2">
+                      <div className="text-xl">🎯</div>
+                      Super Important!
+                    </h4>
+                    <div className="space-y-1 text-pink-700">
+                      <div className="flex items-start gap-2">
+                        <div className="text-lg">🌟</div>
+                        <span>It's totally fine if you are still learning or building your profile.</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <div className="text-lg">🌟</div>
+                        <span>Be honest, show you are working towards it — that's what real achievers do!</span>
+                      </div>
+                    </div>
+                  </div>
+                </AlertDescription>
+              </Alert>
+
+              {/* What You Get */}
+              <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl border border-indigo-200">
+                <h3 className="text-xl font-bold mb-4 text-indigo-800 flex items-center gap-3">
+                  <div className="text-2xl">📦</div>
+                  What You Get From Us:
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 bg-white p-4 rounded-lg border border-indigo-100">
+                    <Gift className="w-6 h-6 text-indigo-600" />
+                    <span className="font-medium text-gray-800">A ready-made, modern Portfolio Website</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-white p-4 rounded-lg border border-indigo-100">
+                    <FileText className="w-6 h-6 text-indigo-600" />
+                    <span className="font-medium text-gray-800">Step-by-Step Guide PDF</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-white p-4 rounded-lg border border-indigo-100">
+                    <Video className="w-6 h-6 text-indigo-600" />
+                    <span className="font-medium text-gray-800">Video to show how to edit</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-white p-4 rounded-lg border border-indigo-100">
+                    <Globe className="w-6 h-6 text-indigo-600" />
+                    <span className="font-medium text-gray-800">Example website for reference</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sample Website Button */}
+              <div className="text-center bg-white p-8 rounded-xl border-2 border-green-200">
+                <Button size="lg" className="gap-3 bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-4" asChild>
+                  <a href="https://portfolio.uniford.org/" target="_blank" rel="noopener noreferrer">
+                    <Globe className="w-6 h-6" />
+                    🔗 See Sample Portfolio Website
+                  </a>
+                </Button>
+                <p className="text-sm text-gray-600 mt-3">Check out the professional standard you'll achieve!</p>
+              </div>
+
+              {/* Final Call to Action */}
+              <div className="text-center bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border border-yellow-200">
+                <div className="flex items-center justify-center gap-3 text-2xl font-bold text-orange-800 mb-2">
+                  <div className="text-3xl">🎉</div>
+                  Once Done — Submit & Earn Your Uniford Badge!
+                </div>
+                <p className="text-orange-700">You're just one step away from joining our exclusive community!</p>
+              </div>
+
               <Alert className="bg-green-50 border-green-200">
-                <Star className="w-4 h-4" />
+                <Heart className="w-4 h-4 text-green-600" />
                 <AlertDescription className="text-base">
                   <strong>Special Advantage:</strong> For portfolio website we give you a coded hi-tech international standard portfolio website code + Guide to edit and all important Guide notes along with this you can find submission form, guide pdf, video, sample example etc in attachment section.
                 </AlertDescription>
               </Alert>
-
-              <div className="text-center">
-                <Button size="lg" className="gap-3 bg-blue-600 hover:bg-blue-700 text-white" asChild>
-                  <a href="https://portfolio.uniford.org/" target="_blank" rel="noopener noreferrer">
-                    <Globe className="w-5 h-5" />
-                    View Sample Portfolio Website
-                  </a>
-                </Button>
-                <p className="text-sm text-gray-600 mt-2">See the professional standard you'll achieve</p>
-              </div>
-
-              <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-                <h4 className="font-semibold text-yellow-800 mb-2">Important Note:</h4>
-                <p className="text-yellow-700">
-                  This portfolio website will serve as your professional digital presence and will be used for verification purposes. 
-                  Make sure to customize it with your personal information, projects, and achievements.
-                </p>
-              </div>
             </CardContent>
           </Card>
         </section>

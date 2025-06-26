@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import OptionalTasks from "./pages/OptionalTasks";
 import Careers from "./pages/Careers";
+import BadgeGuide from "./pages/BadgeGuide";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/optional-tasks" element={<OptionalTasks />} />
           <Route path="/career" element={<Careers />} />
+          <Route path="/badge-guide" element={<BadgeGuide />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

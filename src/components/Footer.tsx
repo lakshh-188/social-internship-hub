@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
@@ -156,6 +155,11 @@ const Footer = () => {
               <li>
                 <Link to="/faq-updates" className="text-gray-300 hover:text-white hover:underline transition-colors">
                   FAQ & Updates
+                </Link>
+              </li>
+              <li>
+                <Link to="/badge-guide" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Badge Guide
                 </Link>
               </li>
             </ul>

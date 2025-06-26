@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { CheckCircle, Download, Mail, ExternalLink, FileText, Users, Award, Star } from "lucide-react";
+import { CheckCircle, Download, Mail, ExternalLink, FileText, Users, Award, Star, Globe, BookOpen, Video, FileCode, Code } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const BadgeGuide = () => {
@@ -33,14 +33,14 @@ const BadgeGuide = () => {
     {
       step: 4,
       title: "Begin Task Execution",
-      description: "Start working on your assigned tasks and prepare your Linktree submission",
+      description: "Start working on your assigned tasks and prepare your portfolio submission",
       requirement: "Follow the detailed task guide provided"
     },
     {
       step: 5,
-      title: "Submit via Google Form",
-      description: "Complete your Linktree submission through the official Google Form",
-      deliverable: "Linktree with all required profile links"
+      title: "Submit Portfolio Website",
+      description: "Complete your portfolio website submission through the official Google Form",
+      deliverable: "Hi-tech international standard portfolio website"
     },
     {
       step: 6,
@@ -50,25 +50,56 @@ const BadgeGuide = () => {
     }
   ];
 
-  const profileRequirements = [
-    { name: "Personal Portfolio Website", description: "Professional showcase of your skills and projects", required: true },
-    { name: "Solvearn Profile", description: "Demonstrate your problem-solving capabilities", required: true },
-    { name: "Y Combinator (YC)", description: "Connect with the startup ecosystem", required: true },
-    { name: "LinkedIn", description: "Professional networking and career development", required: true },
-    { name: "Wellfound", description: "Startup job opportunities and connections", required: true },
-    { name: "Techstars", description: "Accelerator program network", required: true },
-    { name: "Product Hunt", description: "Product discovery and innovation platform", required: true },
-    { name: "Indie Hackers", description: "Independent maker community", required: true },
-    { name: "On Deck", description: "Professional community and opportunities", required: true }
-  ];
-
   const attachments = [
-    { name: "Complete Task Guide PDF", type: "PDF", description: "Comprehensive guide for badge completion" },
-    { name: "Portfolio Website Code & Guide", type: "ZIP", description: "Hi-tech international standard portfolio template" },
-    { name: "Profile Creation Video Tutorial", type: "MP4", description: "Step-by-step video instructions" },
-    { name: "Sample Linktree Examples", type: "PDF", description: "Best practice examples from successful applicants" },
-    { name: "Submission Guidelines", type: "PDF", description: "Detailed submission requirements and formats" },
-    { name: "FAQ & Troubleshooting Guide", type: "PDF", description: "Common questions and solutions" }
+    { 
+      name: "Portfolio Website Code", 
+      type: "GitHub Repository", 
+      description: "Complete hi-tech international standard portfolio website source code",
+      url: "https://github.com/Uniford-187/Portfolio.git",
+      icon: <Code className="w-6 h-6 text-blue-600" />
+    },
+    { 
+      name: "Portfolio Repository", 
+      type: "GitHub", 
+      description: "Access the complete portfolio project repository",
+      url: "https://github.com/Uniford-187/Portfolio",
+      icon: <FileCode className="w-6 h-6 text-gray-600" />
+    },
+    { 
+      name: "Portfolio Editing Guide", 
+      type: "Web Guide", 
+      description: "Interactive mentorship guide for portfolio customization",
+      url: "https://portfolio.uniford.org/mentor-me",
+      icon: <BookOpen className="w-6 h-6 text-green-600" />
+    },
+    { 
+      name: "Portfolio Code Guide", 
+      type: "Technical Guide", 
+      description: "Technical documentation and coding guidelines",
+      url: "https://portfolio.uniford.org/tech-mentor",
+      icon: <FileText className="w-6 h-6 text-purple-600" />
+    },
+    { 
+      name: "Submission Form", 
+      type: "Google Form", 
+      description: "Official submission form for your completed portfolio",
+      url: "https://forms.gle/CQakDqcsjZvoev3L9",
+      icon: <ExternalLink className="w-6 h-6 text-orange-600" />
+    },
+    { 
+      name: "Portfolio Guide Video", 
+      type: "YouTube Tutorial", 
+      description: "Step-by-step video tutorial for portfolio creation",
+      url: "https://youtu.be/ALJay23JD90?si=axq0Wkoh84eXZnxH",
+      icon: <Video className="w-6 h-6 text-red-600" />
+    },
+    { 
+      name: "Portfolio Guide Blog", 
+      type: "Medium Article", 
+      description: "Comprehensive written guide for portfolio editing",
+      url: "https://medium.com/@RisingUnicorns/guide-to-edit-portfolio-1cba1296ad3e",
+      icon: <BookOpen className="w-6 h-6 text-indigo-600" />
+    }
   ];
 
   return (
@@ -159,41 +190,60 @@ const BadgeGuide = () => {
               Badge Task Requirements
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Create and submit a comprehensive Linktree containing all required profile links. We provide you with professional portfolio website code, guides, and all necessary resources to ensure your success.
+              Create and submit your professional portfolio website using our hi-tech international standard code and comprehensive guidance
             </p>
           </div>
 
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle className="text-2xl">Linktree Submission Requirements</CardTitle>
-              <CardDescription>
-                Create profiles on the following platforms and include them in your Linktree submission
+          <Card className="mb-8 border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl text-blue-800 flex items-center justify-center gap-3">
+                <Globe className="w-8 h-8" />
+                Portfolio Website Submission
+              </CardTitle>
+              <CardDescription className="text-lg text-blue-700">
+                The Primary Requirement for Badge Certification
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {profileRequirements.map((profile, index) => (
-                  <div key={index} className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
-                    <div className="flex items-center gap-3 mb-2">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                      <h3 className="font-semibold">{profile.name}</h3>
+            <CardContent className="space-y-6">
+              <div className="bg-white p-6 rounded-lg border border-blue-200">
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">What You Need to Submit</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-lg">Professional Portfolio Website</h4>
+                      <p className="text-gray-600">A complete, personalized portfolio website showcasing your skills, projects, and professional profile</p>
                     </div>
-                    <p className="text-sm text-gray-600">{profile.description}</p>
-                    {profile.required && (
-                      <Badge className="mt-2 bg-red-100 text-red-800 text-xs">Required</Badge>
-                    )}
                   </div>
-                ))}
+                </div>
+              </div>
+
+              <Alert className="bg-green-50 border-green-200">
+                <Star className="w-4 h-4" />
+                <AlertDescription className="text-base">
+                  <strong>Special Advantage:</strong> For portfolio website we give you a coded hi-tech international standard portfolio website code + Guide to edit and all important Guide notes along with this you can find submission form, guide pdf, video, sample example etc in attachment section.
+                </AlertDescription>
+              </Alert>
+
+              <div className="text-center">
+                <Button size="lg" className="gap-3 bg-blue-600 hover:bg-blue-700 text-white" asChild>
+                  <a href="https://portfolio.uniford.org/" target="_blank" rel="noopener noreferrer">
+                    <Globe className="w-5 h-5" />
+                    View Sample Portfolio Website
+                  </a>
+                </Button>
+                <p className="text-sm text-gray-600 mt-2">See the professional standard you'll achieve</p>
+              </div>
+
+              <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <h4 className="font-semibold text-yellow-800 mb-2">Important Note:</h4>
+                <p className="text-yellow-700">
+                  This portfolio website will serve as your professional digital presence and will be used for verification purposes. 
+                  Make sure to customize it with your personal information, projects, and achievements.
+                </p>
               </div>
             </CardContent>
           </Card>
-
-          <Alert className="bg-green-50 border-green-200">
-            <Star className="w-4 h-4" />
-            <AlertDescription>
-              <strong>Special Bonus:</strong> We provide you with a hi-tech international standard portfolio website code along with comprehensive editing guides and video tutorials to ensure professional presentation.
-            </AlertDescription>
-          </Alert>
         </section>
 
         {/* Attachments Section */}
@@ -201,19 +251,19 @@ const BadgeGuide = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
               <Download className="w-8 h-8 text-indigo-600" />
-              Resource Attachments
+              Resources Attachments
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Download essential resources, guides, and examples to help you complete your badge requirements successfully
+              Access all essential resources, code, guides, and tutorials to successfully create your portfolio website
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {attachments.map((attachment, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <FileText className="w-6 h-6 text-purple-600" />
+                    {attachment.icon}
                     <div>
                       <CardTitle className="text-lg">{attachment.name}</CardTitle>
                       <Badge variant="outline" className="mt-1">{attachment.type}</Badge>
@@ -222,9 +272,11 @@ const BadgeGuide = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">{attachment.description}</p>
-                  <Button variant="outline" className="w-full gap-2">
-                    <Download className="w-4 h-4" />
-                    Download
+                  <Button variant="outline" className="w-full gap-2" asChild>
+                    <a href={attachment.url} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4" />
+                      Access Resource
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -240,96 +292,189 @@ const BadgeGuide = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Get answers to common questions about opportunities, programs, and career advancement through Uniford
+              Get detailed answers to important questions about opportunities, programs, and career advancement through Uniford
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="opportunities" className="border rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold">
-                How can I access internships, become a Frontliner, and participate in opportunities like project expo, book writing, AI & automation internships, and certification platforms?
-              </AccordionTrigger>
-              <AccordionContent className="space-y-4 pt-4">
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h4 className="font-semibold mb-3 text-blue-800">The Challenge Students Face</h4>
-                  <p className="text-gray-700 mb-4">
-                    Many talented students experience brain drain and potential drain due to:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>High application fees creating financial barriers</li>
-                    <li>Limited access to quality platforms and opportunities</li>
-                    <li>Lack of mentorship and professional guidance</li>
-                    <li>Social and financial discrimination in selection processes</li>
-                  </ul>
+          <div className="space-y-6">
+            <Card className="overflow-hidden border-2 border-green-200">
+              <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50 border-b border-green-200">
+                <CardTitle className="text-xl text-green-800 flex items-center gap-3">
+                  <Award className="w-6 h-6" />
+                  How can I access internships, become a Frontliner, and participate in opportunities?
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="space-y-6">
+                  <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                    <h4 className="font-bold mb-3 text-red-800 text-lg flex items-center gap-2">
+                      <ExternalLink className="w-5 h-5" />
+                      The Challenge Students Face
+                    </h4>
+                    <p className="text-gray-700 mb-4 text-base leading-relaxed">
+                      Many talented students experience brain drain and potential drain due to systemic barriers that prevent them from accessing quality opportunities.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="bg-white p-4 rounded-lg border border-red-100">
+                        <h5 className="font-semibold text-red-700 mb-2">Financial Barriers</h5>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• High application fees</li>
+                          <li>• Limited financial resources</li>
+                          <li>• Cost of premium platforms</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white p-4 rounded-lg border border-red-100">
+                        <h5 className="font-semibold text-red-700 mb-2">Access Issues</h5>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• Limited quality platforms</li>
+                          <li>• Lack of mentorship</li>
+                          <li>• Social discrimination</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                    <h4 className="font-bold mb-4 text-green-800 text-lg flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5" />
+                      Our Solution: Uniford Scholar ID Card
+                    </h4>
+                    <p className="text-gray-700 mb-4 text-base leading-relaxed">
+                      If you're eligible for the <strong className="text-green-800">Uniford Scholar ID Card</strong>, our organization provides comprehensive support without any fees or discrimination.
+                    </p>
+                    
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-3">
+                        <div className="bg-white p-4 rounded-lg border border-green-100">
+                          <h5 className="font-semibold text-green-700 mb-2 flex items-center gap-2">
+                            <Star className="w-4 h-4" />
+                            Career Development
+                          </h5>
+                          <ul className="text-sm text-gray-700 space-y-1">
+                            <li>• <strong>Internship Programs:</strong> Direct access without fees</li>
+                            <li>• <strong>Frontliner Program:</strong> Leadership development</li>
+                            <li>• <strong>Letters of Recommendation:</strong> Professional endorsements</li>
+                          </ul>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-green-100">
+                          <h5 className="font-semibold text-green-700 mb-2 flex items-center gap-2">
+                            <BookOpen className="w-4 h-4" />
+                            Learning & Growth
+                          </h5>
+                          <ul className="text-sm text-gray-700 space-y-1">
+                            <li>• <strong>UNSIP:</strong> Social impact projects</li>
+                            <li>• <strong>Author Program:</strong> Book writing opportunities</li>
+                            <li>• <strong>Certification Programs:</strong> Industry recognition</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="bg-white p-4 rounded-lg border border-green-100">
+                          <h5 className="font-semibold text-green-700 mb-2 flex items-center gap-2">
+                            <Globe className="w-4 h-4" />
+                            Platform Access
+                          </h5>
+                          <ul className="text-sm text-gray-700 space-y-1">
+                            <li>• <strong>Platform Access:</strong> Educational & professional tools</li>
+                            <li>• <strong>Resource Support:</strong> All necessary materials</li>
+                            <li>• <strong>Referral Networks:</strong> Professional connections</li>
+                          </ul>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-green-100">
+                          <h5 className="font-semibold text-green-700 mb-2 flex items-center gap-2">
+                            <Award className="w-4 h-4" />
+                            Recognition
+                          </h5>
+                          <ul className="text-sm text-gray-700 space-y-1">
+                            <li>• <strong>Featured Opportunities:</strong> Spotlight in publications</li>
+                            <li>• <strong>Event Participation:</strong> Exclusive programs</li>
+                            <li>• <strong>Achievement Support:</strong> Comprehensive backing</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h4 className="font-semibold mb-3 text-green-800">Our Solution: Uniford Scholar ID Card</h4>
-                  <p className="text-gray-700 mb-4">
-                    If you're eligible for the <strong>Uniford Scholar ID Card</strong>, our organization provides comprehensive support including:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li><strong>Internship Programs:</strong> Direct access to quality internships without fees</li>
-                    <li><strong>UNSIP (Uniford Social Impact Program):</strong> Social impact projects and initiatives</li>
-                    <li><strong>Frontliner Program:</strong> Leadership development and advanced opportunities</li>
-                    <li><strong>Author Program:</strong> Book writing and publishing opportunities</li>
-                    <li><strong>Platform Access:</strong> Unlimited access to educational and professional platforms</li>
-                    <li><strong>Resource Support:</strong> All necessary tools and materials provided</li>
-                    <li><strong>Certification Programs:</strong> Industry-recognized certifications</li>
-                    <li><strong>Letters of Recommendation:</strong> Professional endorsements for career advancement</li>
-                    <li><strong>Referral Networks:</strong> Access to our extensive professional network</li>
-                    <li><strong>Featured Opportunities:</strong> Spotlight in our publications and events</li>
-                  </ul>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
+              </CardContent>
+            </Card>
 
-            <AccordionItem value="caf" className="border rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold">
-                What is CAF and how does it help scholars get paid internships, direct interviews without technical filters, and other career opportunities?
-              </AccordionTrigger>
-              <AccordionContent className="space-y-4 pt-4">
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h4 className="font-semibold mb-3 text-purple-800">Introducing CAF (Common Application Framework)</h4>
-                  <p className="text-gray-700 mb-4">
-                    CAF is Uniford's revolutionary <strong>AI-based profile recommendation system</strong> designed to connect verified scholars with worldwide opportunities seamlessly.
-                  </p>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white p-6 border rounded-lg">
-                    <h5 className="font-semibold mb-3 text-gray-800">How CAF Works</h5>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li>• AI analyzes your verified scholar profile</li>
-                      <li>• Matches your skills with global opportunities</li>
-                      <li>• Provides personalized recommendations</li>
-                      <li>• Facilitates direct connections with employers</li>
-                      <li>• Bypasses traditional filtering processes</li>
-                    </ul>
+            <Card className="overflow-hidden border-2 border-purple-200">
+              <CardHeader className="bg-gradient-to-r from-purple-50 to-indigo-50 border-b border-purple-200">
+                <CardTitle className="text-xl text-purple-800 flex items-center gap-3">
+                  <Star className="w-6 h-6" />
+                  What is CAF and how does it help with career opportunities?
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="space-y-6">
+                  <div className="bg-purple-50 p-6 rounded-xl border border-purple-200">
+                    <h4 className="font-bold mb-3 text-purple-800 text-lg flex items-center gap-2">
+                      <FileText className="w-5 h-5" />
+                      Introducing CAF (Common Application Framework)
+                    </h4>
+                    <p className="text-gray-700 mb-4 text-base leading-relaxed">
+                      CAF is Uniford's revolutionary <strong className="text-purple-800">AI-based profile recommendation system</strong> designed to connect verified scholars with worldwide opportunities seamlessly, eliminating traditional barriers and filters.
+                    </p>
                   </div>
 
-                  <div className="bg-white p-6 border rounded-lg">
-                    <h5 className="font-semibold mb-3 text-gray-800">Opportunities Through CAF</h5>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li>• <strong>Paid Internships:</strong> Direct placement without fees</li>
-                      <li>• <strong>Job Opportunities:</strong> Global career positions</li>
-                      <li>• <strong>Scholarships:</strong> Educational funding opportunities</li>
-                      <li>• <strong>Grants:</strong> Research and project funding</li>
-                      <li>• <strong>Invitations:</strong> Exclusive events and programs</li>
-                      <li>• <strong>Featured Profiles:</strong> Industry recognition</li>
-                    </ul>
-                  </div>
-                </div>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white p-6 border-2 border-blue-200 rounded-xl">
+                      <h5 className="font-bold mb-4 text-blue-800 text-lg flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5" />
+                        How CAF Works
+                      </h5>
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm flex-shrink-0 mt-0.5">1</div>
+                          <p className="text-gray-700 text-sm">AI analyzes your verified scholar profile comprehensively</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm flex-shrink-0 mt-0.5">2</div>
+                          <p className="text-gray-700 text-sm">Matches your skills with global opportunities in real-time</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm flex-shrink-0 mt-0.5">3</div>
+                          <p className="text-gray-700 text-sm">Provides personalized, targeted recommendations</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm flex-shrink-0 mt-0.5">4</div>
+                          <p className="text-gray-700 text-sm">Facilitates direct connections with decision-makers</p>
+                        </div>
+                      </div>
+                    </div>
 
-                <Alert className="bg-yellow-50 border-yellow-200">
-                  <Star className="w-4 h-4" />
-                  <AlertDescription>
-                    <strong>Key Advantage:</strong> CAF eliminates traditional barriers like DSA tests, aptitude filters, and complex application processes. Our verified scholars get direct access to decision-makers through our referral and recommendation system.
-                  </AlertDescription>
-                </Alert>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+                    <div className="bg-white p-6 border-2 border-green-200 rounded-xl">
+                      <h5 className="font-bold mb-4 text-green-800 text-lg flex items-center gap-2">
+                        <Award className="w-5 h-5" />
+                        Opportunities Through CAF
+                      </h5>
+                      <div className="space-y-3">
+                        <div className="bg-green-50 p-3 rounded-lg border border-green-100">
+                          <h6 className="font-semibold text-green-700 text-sm mb-1">Career Opportunities</h6>
+                          <p className="text-xs text-gray-600">Paid internships, job placements, direct interviews</p>
+                        </div>
+                        <div className="bg-green-50 p-3 rounded-lg border border-green-100">
+                          <h6 className="font-semibold text-green-700 text-sm mb-1">Financial Support</h6>
+                          <p className="text-xs text-gray-600">Scholarships, grants, research funding</p>
+                        </div>
+                        <div className="bg-green-50 p-3 rounded-lg border border-green-100">
+                          <h6 className="font-semibold text-green-700 text-sm mb-1">Professional Growth</h6>
+                          <p className="text-xs text-gray-600">Exclusive invitations, featured profiles, industry recognition</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <Alert className="bg-yellow-50 border-yellow-300 border-2">
+                    <Star className="w-5 h-5 text-yellow-600" />
+                    <AlertDescription className="text-base">
+                      <strong className="text-yellow-800">Key Advantage:</strong> CAF eliminates traditional barriers like DSA tests, aptitude filters, and complex application processes. Our verified scholars get direct access to decision-makers through our referral and recommendation system, bypassing conventional screening methods entirely.
+                    </AlertDescription>
+                  </Alert>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
         {/* Call to Action */}

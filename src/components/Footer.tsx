@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
@@ -120,6 +121,11 @@ const Footer = () => {
               <li>
                 <Link to="/letter-of-clearance" className="text-gray-300 hover:text-white hover:underline transition-colors">
                   Letter of Clearance
+                </Link>
+              </li>
+              <li>
+                <Link to="/tasks" className="text-gray-300 hover:text-white hover:underline transition-colors">
+                  Tasks
                 </Link>
               </li>
             </ul>

@@ -9,6 +9,9 @@ import OptionalTasks from "./pages/OptionalTasks";
 import Careers from "./pages/Careers";
 import BadgeGuide from "./pages/BadgeGuide";
 import Tasks from "./pages/Tasks";
+import TechSupportTask from "./pages/TechSupportTask";
+import CommunityOutreachTask from "./pages/CommunityOutreachTask";
+import DigitalMarketingTask from "./pages/DigitalMarketingTask";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/career" element={<Careers />} />
           <Route path="/badge-guide" element={<BadgeGuide />} />
           <Route path="/tasks" element={<Tasks />} />
+          <Route path="/tech-support-task" element={<TechSupportTask />} />
+          <Route path="/community-outreach-task" element={<CommunityOutreachTask />} />
+          <Route path="/digital-marketing-task" element={<DigitalMarketingTask />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

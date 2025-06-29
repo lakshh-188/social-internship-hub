@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { TaskCard } from "@/components/TaskCard";
 import { TaskModal } from "@/components/TaskModal";
+import { TaskPreviewCard } from "@/components/TaskPreviewCard";
 import { ReferenceLinks } from "@/components/ReferenceLinks";
 import { Benefits } from "@/components/Benefits";
 import { SubmissionProcess } from "@/components/SubmissionProcess";
@@ -119,6 +119,36 @@ const Index = () => {
 
   const compulsoryTasks = tasks;
 
+  const additionalTasks = [
+    {
+      icon: "🔧",
+      title: "Tech Support for Frontliners",
+      description: "Connect deserving frontliners with free website and tech support from Uniford. Act as a tech evangelist and help remove digital barriers for changemakers.",
+      difficulty: "Medium",
+      impact: "High",
+      link: "/tech-support-task",
+      color: "blue"
+    },
+    {
+      icon: "🤝",
+      title: "Community Outreach Program",
+      description: "Build bridges between Uniford Foundation and local communities. Conduct needs assessments and create meaningful social impact through direct engagement.",
+      difficulty: "Hard",
+      impact: "Very High",
+      link: "/community-outreach-task",
+      color: "green"
+    },
+    {
+      icon: "📱",
+      title: "Digital Marketing Support",
+      description: "Amplify Uniford's mission through strategic digital marketing campaigns. Create engaging content and manage social media to reach more students.",
+      difficulty: "Easy",
+      impact: "High",
+      link: "/digital-marketing-task",
+      color: "orange"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
       {/* NavBar */}
@@ -184,6 +214,28 @@ const Index = () => {
                 task={task}
                 onClick={() => setSelectedTask(task)}
                 getDifficultyColor={getDifficultyColor}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Additional Volunteer Tasks */}
+        <div className="mb-12">
+          <div className="flex items-center gap-2 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900">Additional Volunteer Tasks</h3>
+            <Badge className="bg-green-100 text-green-800">High Impact</Badge>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {additionalTasks.map((task, index) => (
+              <TaskPreviewCard
+                key={index}
+                icon={task.icon}
+                title={task.title}
+                description={task.description}
+                difficulty={task.difficulty}
+                impact={task.impact}
+                link={task.link}
+                color={task.color}
               />
             ))}
           </div>

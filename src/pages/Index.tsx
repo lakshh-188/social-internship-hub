@@ -146,6 +146,15 @@ const Index = () => {
       impact: "High",
       link: "/digital-marketing-task",
       color: "orange"
+    },
+    {
+      icon: "🏫",
+      title: "UNCIF Curriculum Implementation",
+      description: "Connect with educational institutes and implement UNCIF framework. Transform institutions into globally competitive, opportunity-rich environments.",
+      difficulty: "Hard",
+      impact: "Very High",
+      link: "/uncif-curriculum-task",
+      color: "purple"
     }
   ];
 
@@ -225,7 +234,7 @@ const Index = () => {
             <h3 className="text-2xl font-bold text-gray-900">Additional Volunteer Tasks</h3>
             <Badge className="bg-green-100 text-green-800">High Impact</Badge>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {additionalTasks.map((task, index) => (
               <TaskPreviewCard
                 key={index}

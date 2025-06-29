@@ -12,6 +12,8 @@ import Tasks from "./pages/Tasks";
 import TechSupportTask from "./pages/TechSupportTask";
 import CommunityOutreachTask from "./pages/CommunityOutreachTask";
 import DigitalMarketingTask from "./pages/DigitalMarketingTask";
+import UncifCurriculumTask from "./pages/UncifCurriculumTask";
+import Policy from "./pages/Policy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/tech-support-task" element={<TechSupportTask />} />
           <Route path="/community-outreach-task" element={<CommunityOutreachTask />} />
           <Route path="/digital-marketing-task" element={<DigitalMarketingTask />} />
+          <Route path="/uncif-curriculum-task" element={<UncifCurriculumTask />} />
+          <Route path="/policy" element={<Policy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

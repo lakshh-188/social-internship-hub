@@ -2,38 +2,38 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { 
-  Globe, 
+  Wrench, 
   Users, 
   Target, 
-  Search, 
   CheckCircle, 
-  XCircle, 
-  FileText, 
-  MessageSquare, 
-  Wrench 
+  Globe, 
+  Filter, 
+  Award,
+  Instagram,
+  Linkedin,
+  Search
 } from "lucide-react";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 const TechSupportTask = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50">
       <NavBar />
       
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 pt-32">
+      <div className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-16 pt-32">
         <div className="container mx-auto px-4 text-center">
           <div className="text-4xl mb-4">🔧</div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Tech Support for Frontliners
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Empower changemakers with free websites and digital solutions
+            Connect deserving frontliners with free website and tech support from Uniford
           </p>
-          <Badge className="bg-green-500 text-white text-lg px-4 py-2">
-            Volunteer Opportunity
+          <Badge className="bg-blue-500 text-white text-lg px-4 py-2">
+            High Impact Volunteer Task
           </Badge>
         </div>
       </div>
@@ -50,162 +50,161 @@ const TechSupportTask = () => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700 mb-4">
-              Uniford is offering free websites and tech support to empower frontliners such as:
+              Uniford is offering free websites and tech support to empower frontliners such as early-stage business owners, social activists, NGOs & community leaders, and startups solving real-world problems.
             </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    Early-stage business owners
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    Social activists
-                  </li>
-                </ul>
+            <p className="text-gray-700 mb-6">
+              This initiative is meant to remove digital barriers for changemakers. The website is completely free — only minimal formatting/editing charges apply, as detailed transparently on the 'Policy' page.
+            </p>
+            <div className="grid md:grid-cols-4 gap-4 mt-6">
+              <div className="bg-blue-50 p-4 rounded-lg text-center">
+                <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                <h3 className="font-semibold">Business Owners</h3>
+                <p className="text-sm text-gray-600">Early-stage entrepreneurs</p>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    NGOs & community leaders
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    Startups solving real-world problems
-                  </li>
-                </ul>
+              <div className="bg-green-50 p-4 rounded-lg text-center">
+                <Target className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                <h3 className="font-semibold">Social Activists</h3>
+                <p className="text-sm text-gray-600">Community changemakers</p>
               </div>
-            </div>
-            <div className="mt-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded">
-              <p className="text-sm text-gray-700">
-                💡 This initiative removes digital barriers for changemakers. The website is completely free — only minimal formatting/editing charges apply.
-              </p>
+              <div className="bg-purple-50 p-4 rounded-lg text-center">
+                <Award className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                <h3 className="font-semibold">NGOs</h3>
+                <p className="text-sm text-gray-600">Community leaders</p>
+              </div>
+              <div className="bg-orange-50 p-4 rounded-lg text-center">
+                <Wrench className="h-8 w-8 text-orange-600 mx-auto mb-2" />
+                <h3 className="font-semibold">Startups</h3>
+                <p className="text-sm text-gray-600">Problem solvers</p>
+              </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Volunteer Responsibility */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-2xl">
-              <Users className="h-6 w-6 text-indigo-600" />
-              Volunteer Responsibility
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-700 mb-4">
-              Your role is to act as a <strong>tech evangelist + relationship builder</strong> who connects deserving frontliners with Uniford's tech support.
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Core Objectives */}
+        {/* Your Responsibility */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-2xl">
               <Target className="h-6 w-6 text-purple-600" />
-              Core Objectives
+              Your Responsibility
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2">Awareness</h3>
-                <p className="text-sm text-gray-600">
-                  Inform potential frontliners about this powerful opportunity and explain how UNCIF can help them grow.
-                </p>
+            <p className="text-gray-700 mb-6">
+              Your role is to act as a tech evangelist + relationship builder who connects deserving frontliners with Uniford's tech support.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="font-semibold text-lg mb-3 text-blue-800">Awareness</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>• Inform potential frontliners about this opportunity</li>
+                  <li>• Explain how UNCIF can help them grow</li>
+                  <li>• Share success stories and benefits</li>
+                </ul>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2">Outreach & Onboarding</h3>
-                <p className="text-sm text-gray-600">
-                  Personally reach out to frontliners, share registration links, and guide them through the process.
-                </p>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="font-semibold text-lg mb-3 text-green-800">Outreach & Onboarding</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>• Personally reach out to frontliners</li>
+                  <li>• Share onboarding page or registration link</li>
+                  <li>• Guide them on claiming their free website</li>
+                </ul>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2">Filtering & Screening</h3>
-                <p className="text-sm text-gray-600">
-                  Ensure individuals/orgs are purpose-driven, have genuine need, and align with Uniford's mission.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2">Coordination</h3>
-                <p className="text-sm text-gray-600">
-                  Connect green-flagged frontliners with the UNCIF department through proper channels.
-                </p>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="font-semibold text-lg mb-3 text-purple-800">Filtering & Screening</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>• Ensure individual/org is purpose-driven</li>
+                  <li>• Verify genuine need and intent</li>
+                  <li>• Check alignment with Uniford's mission</li>
+                </ul>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Outreach Methods */}
+        {/* Finding Frontliners */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-2xl">
-              <Search className="h-6 w-6 text-green-600" />
-              Outreach Methods
+              <Search className="h-6 w-6 text-indigo-600" />
+              How to Find Frontliners
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="bg-pink-50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Social Media</h4>
-                <ul className="text-sm space-y-1">
-                  <li>• Instagram Business Pages</li>
-                  <li>• LinkedIn filtering</li>
-                  <li>• WhatsApp/Telegram groups</li>
-                </ul>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-lg mb-3">Online Channels</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Instagram className="h-5 w-5 text-pink-500" />
+                    <span className="text-sm">Instagram Business Pages (eco, shoplocal, NGO, campaign, startup)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Linkedin className="h-5 w-5 text-blue-600" />
+                    <span className="text-sm">LinkedIn (Nonprofit, Entrepreneur, Startup, Local Business)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Globe className="h-5 w-5 text-green-600" />
+                    <span className="text-sm">Website directories (JustDial, Indiamart, GoDaddy)</span>
+                  </div>
+                </div>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Online Directories</h4>
-                <ul className="text-sm space-y-1">
-                  <li>• Website registrations</li>
-                  <li>• Justdial, Indiamart</li>
-                  <li>• GoDaddy directories</li>
-                </ul>
-              </div>
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Communities</h4>
-                <ul className="text-sm space-y-1">
-                  <li>• College cells (NSS, E-Cells)</li>
-                  <li>• Local entrepreneur groups</li>
-                  <li>• Offline connections</li>
-                </ul>
+              <div>
+                <h3 className="font-semibold text-lg mb-3">Community Channels</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Users className="h-5 w-5 text-purple-600" />
+                    <span className="text-sm">WhatsApp/Telegram groups</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Target className="h-5 w-5 text-orange-600" />
+                    <span className="text-sm">College cells (NSS, E-Cells, Incubators)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Award className="h-5 w-5 text-red-600" />
+                    <span className="text-sm">Local networks and events</span>
+                  </div>
+                </div>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Green vs Red Flags */}
+        {/* Green Flag vs Red Flag */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl mb-4">Screening Criteria</CardTitle>
+            <CardTitle className="flex items-center gap-2 text-2xl">
+              <Filter className="h-6 w-6 text-yellow-600" />
+              Green Flag vs Red Flag Criteria
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="flex items-center gap-2 text-lg font-semibold text-green-800 mb-4">
+              <div className="bg-green-50 p-6 rounded-lg border-2 border-green-200">
+                <h3 className="font-semibold text-lg mb-3 text-green-800 flex items-center gap-2">
                   <CheckCircle className="h-5 w-5" />
                   Green Flag Criteria ✅
                 </h3>
                 <ul className="space-y-2 text-sm">
-                  <li>✓ Purpose-based initiative</li>
-                  <li>✓ Early-stage or resource-limited</li>
-                  <li>✓ Willing to collaborate</li>
-                  <li>✓ Creates social value</li>
+                  <li>• Purpose-based initiative</li>
+                  <li>• Early-stage or resource-limited</li>
+                  <li>• Willing to collaborate</li>
+                  <li>• Creates social value</li>
+                  <li>• Genuine need and intent</li>
+                  <li>• Aligns with Uniford's mission</li>
                 </ul>
               </div>
-              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                <h3 className="flex items-center gap-2 text-lg font-semibold text-red-800 mb-4">
-                  <XCircle className="h-5 w-5" />
+              <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
+                <h3 className="font-semibold text-lg mb-3 text-red-800 flex items-center gap-2">
+                  <Target className="h-5 w-5" />
                   Red Flag Criteria ❌
                 </h3>
                 <ul className="space-y-2 text-sm">
-                  <li>✗ Commercial motives only</li>
-                  <li>✗ Already funded or fully developed</li>
-                  <li>✗ Not responsive or disrespectful</li>
-                  <li>✗ Involves unethical activities</li>
+                  <li>• Commercial motives only</li>
+                  <li>• Already funded or fully developed</li>
+                  <li>• Not responsive or disrespectful</li>
+                  <li>• Involves unethical or misleading info</li>
+                  <li>• No genuine social impact</li>
+                  <li>• Misaligned with foundation values</li>
                 </ul>
               </div>
             </div>
@@ -216,12 +215,12 @@ const TechSupportTask = () => {
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-2xl">
-              <MessageSquare className="h-6 w-6 text-indigo-600" />
+              <Award className="h-6 w-6 text-purple-600" />
               Sample Approach Script
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-400">
+            <div className="bg-purple-50 p-6 rounded-lg">
               <p className="text-gray-700 italic">
                 "Hey! I'm part of a global youth initiative backed by Uniford that offers free website support to early-stage changemakers like you — NGOs, startups, and impact-led businesses. We help you go digital, look premium, and expand your mission. You only pay a basic editing/setup fee — that's it. If you're interested, I'll connect you to our tech team. Let's grow together!"
               </p>
@@ -229,47 +228,10 @@ const TechSupportTask = () => {
           </CardContent>
         </Card>
 
-        {/* Tools & Benefits */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Wrench className="h-5 w-5 text-blue-600" />
-                Tools You Can Use
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2 text-sm">
-                <li>• Google Sheets – Manage outreach data</li>
-                <li>• Canva/Docs – Create visual pitches</li>
-                <li>• Uniford Policy Page – Pricing reference</li>
-                <li>• WhatsApp Business/Email – Professional communication</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-green-600" />
-                Volunteer Benefits
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2 text-sm">
-                <li>• Volunteer Certificate</li>
-                <li>• Eligibility for tech/PR/branding roles</li>
-                <li>• Recommendation letter (performance-based)</li>
-                <li>• Premium resource access</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-
         {/* CTA */}
         <div className="text-center">
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-            Start This Volunteer Task
+            Start Connecting Frontliners
           </Button>
         </div>
       </div>
